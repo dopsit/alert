@@ -20,3 +20,13 @@ function msj(msj,type=null){
 function msjRemove(e){
 	alertBox.removeChild(e);
 }
+
+
+function confirmation(mesaje,fn){
+	var createmodal = document.createElement("div");
+	createmodal.innerHTML ="<div class='confirmation-modal'><div>"+ mesaje +"<br><br><button class='btn natural' id='ccc'>Cancelar</button> <button class='btn natural' id='ooo'>Ok</button></div></div>"; 
+	document.body.appendChild(createmodal);
+
+	document.getElementById('ccc').addEventListener("click", ()=>{document.body.removeChild(createmodal);});
+	document.getElementById('ooo').addEventListener("click", ()=>{fn(); document.body.removeChild(createmodal);});
+}
