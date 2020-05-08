@@ -2,14 +2,35 @@
 <html>
 <head>
 	<title>Alert System</title>
+
+	<!-- Css from alertSystem -->
 	<link rel="stylesheet" type="text/css" href="alert.css">
+
 </head>
 <body>
 
 
-<!-- Div necesario para mostrar los mensajes -->
-<div id='alertBox'></div><script src="alert.js"></script>
 
+<!-- Demostration -->
+<center>
+	<h1>Demostration</h1>
+
+<br>	
+
+<input id="data" type="text" placeholder="Message">
+<input type="submit" value="Alert Ok" onclick="msj( document.getElementById('data').value )">
+<input type="submit" value="Alert Wrong" onclick="msj( document.getElementById('data').value ,'error' )">
+<input type="submit" value="Alert + Confirmation" onclick="confirmation('Send Alert?', ()=>{ 
+																							msj( document.getElementById('data').value ) 
+																						}) ">
+</center>
+
+
+
+
+
+<!--  Necessary div to display messages -->
+<div id='alertBox'></div><script src="alert.js"></script>
 
 </body>
 </html>
