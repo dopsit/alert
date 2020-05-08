@@ -35,3 +35,28 @@
 
 .alertFine{background-color:#44a; color:#fff;}
 .alertWrong{background-color:#a44; color:#fff;}
+
+/* Confirmation box */
+
+.confirmation-modal{
+	position:fixed; 
+	top:0; 
+	left:0; 
+	width:100vw; 
+	height:100vh; 
+	z-index:100; 
+	background-color:rgba(0,0,0,.8);
+}
+
+.confirmation-modal div{
+	position:absolute;
+	top:30%;
+	left:calc(50% - 150px);
+	display: block;
+	background-color:#e0e0e0;
+	color:#000;
+	padding:1rem;
+	border-radius:3px;
+	text-align:center;
+	width:300px;
+}
