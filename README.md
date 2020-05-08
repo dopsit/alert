@@ -15,7 +15,7 @@
    Tambien consta de un sistema modal para confirmación de acciones.
    
          El metodo de empleo es: 
-              <button onclick="confirmation( 'Seguro que quieres hacerlo?' , ()=>{ console.log('Se confirmo') } )"></button>
+           <button onclick="confirmation( 'Seguro que quieres hacerlo?' , ()=>{ console.log('Se confirmo') } )"></button>
          
          otra forma es:
               
