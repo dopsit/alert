@@ -4,7 +4,7 @@
 	top:70px;
 	right:28px;
 	z-index:100;
-	height:0;
+	height:100px;
 }
 
 #alertBox div{
@@ -17,7 +17,6 @@
 	max-width:270px;
 	min-height:2em;
 	text-align: center;
-	margin:0px 0px;
 }
 
 #alertBox div button{
@@ -33,8 +32,8 @@
 	border:0;
 }
 
-.alertFine{background-color:#44a; color:#fff;}
-.alertWrong{background-color:#a44; color:#fff;}
+.alertFine{background-color:#44a; color:#fff; margin:5px 0px;}
+.alertWrong{background-color:#a44; color:#fff; margin:5px 0px;}
 
 /* Confirmation box */
 
