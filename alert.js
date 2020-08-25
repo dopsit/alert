@@ -1,29 +1,19 @@
-var alertBox = document.getElementById('alertBox');
+const alertBox = document.getElementById('alertBox');
 
-function msj(msj,type=null){
-	var createMsj = document.createElement("div");
+function mssg(mssg,type=null){
+	const createMssg = document.createElement("div");
 	
-	if(type == 'e' || type == 'error'){	createMsj.setAttribute("class", "alertWrong"); }else{ createMsj.setAttribute("class", "alertFine"); }
+	if(type == 'e' || type == 'error'){	createMssg.setAttribute("class", "alertWrong"); }else{ createMssg.setAttribute("class", "alertFine"); }
 
-		createMsj.innerHTML =  msj +"<button onclick=\"msjRemove(this.parentNode)\">x</button>";	
+		createMssg.innerHTML =  mssg +"<button class='alertBox_btn' onclick=\"mssgRemove(this.parentNode)\">x</button>";	
 
-	alertBox.appendChild(createMsj);
+	alertBox.appendChild(createMssg);
 
 	setTimeout(function(){ 	
-		if(alertBox.contains(createMsj)){ alertBox.removeChild(createMsj); }
+		if(alertBox.contains(createMssg)){ alertBox.removeChild(createMssg); }
 	}, 5000);
 }	
 
-function msjRemove(e){
+function mssgRemove(e){
 	alertBox.removeChild(e);
-}
-
-
-function confirmation(mesaje,fn){
-	var confirmationBox = document.createElement("div");
-	confirmationBox.innerHTML ="<div class='confirmation-modal'><div>"+ mesaje +"<br><br><button id='confirmationCancel'>Cancelar</button> <button id='confirmationOk'>Ok</button></div></div>"; 
-	document.body.appendChild(confirmationBox);
-
-	document.getElementById('confirmationCancel').addEventListener("click", ()=>{document.body.removeChild(confirmationBox);});
-	document.getElementById('confirmationOk').addEventListener("click", ()=>{fn(); document.body.removeChild(confirmationBox);});
 }
