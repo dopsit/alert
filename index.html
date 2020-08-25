@@ -21,13 +21,8 @@
 <br>	
 
 <input id="data" type="text" placeholder="Message">
-<input type="submit" value="Alert Ok" onclick="msj( document.getElementById('data').value )">
-<input type="submit" value="Alert Wrong" onclick="msj( document.getElementById('data').value ,'error' )">
-<input type="submit" value="Alert + Confirmation" onclick="confirmation('Send Alert?', ()=>{ 
-																							msj( document.getElementById('data').value ) 
-																						}) ">
-
-
+<input type="submit" value="Alert Ok" onclick="mssg( document.getElementById('data').value )">
+<input type="submit" value="Alert Wrong" onclick="mssg( document.getElementById('data').value ,'error' )">
 
 </body>
 </html>
