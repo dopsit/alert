@@ -1,11 +1,12 @@
-alertBox{
+.alertBox{
 	font-size:14px;
 	position:fixed;
 	top:85px;
 	right:1rem;
-	z-index:100;
+	z-index:1000;
 	height:100px;
 }
+
 .alertBox_btn{
 	font-family: sans-serif;
 	position:absolute;
@@ -14,7 +15,8 @@ alertBox{
 	font-size:.8em;
 	font-weight: normal;
 	cursor: pointer;
-	background-color:transparent;
+	background:none;
+	outline: none;
 	padding:2px;
 	color:#eee;
 	border:0;
@@ -32,7 +34,10 @@ alertBox{
 	max-width:270px;
 	min-height:2em;
 	text-align: center;
+	opacity:1;
+	transition:opacity .7s linear;
 }
+
 .alertWrong{
 	background-color:#a44; 
 	color:#fff; 
@@ -45,4 +50,8 @@ alertBox{
 	max-width:270px;
 	min-height:2em;
 	text-align: center;
+	opacity:1;
+	transition:opacity .7s linear;
 }
+
+.alertHidden{opacity: 0;}
