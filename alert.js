@@ -1,6 +1,6 @@
-const alertBox = document.getElementById('alertBox');
-
 function mssg(mssg,type=null){
+	const alertBox = document.getElementById('alertBox');
+	
 	const createMssg = document.createElement("DIV");
 	
 	if(type === 'e' || type === 'error'){	
