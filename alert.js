@@ -1,30 +1,19 @@
-function mssg(mssg,type=null){
+function mssg(message,type=null){
 	const alertBox = document.getElementById('alertBox');
 	
-	const createMssg = document.createElement("DIV");
+	const createAlert = document.createElement("DIV");
 	
-	if(type === 'e' || type === 'error'){	
-		createMssg.setAttribute("class", "alertWrong"); 
-	}else{ 
-		createMssg.setAttribute("class", "alertFine"); 
-	}
+	createAlert.setAttribute("class", (type === 'e' || type === 'error')? "alertWrong" : "alertFine" ); 
+		
+	createAlert.innerHTML = `<button class='alertBox_btn' onclick="this.parentNode.remove()">x</button> ${message}`;	
 
-	createMssg.innerHTML = `<button class='alertBox_btn'>x</button> ${mssg}`;	
-
-	alertBox.appendChild(createMssg);
-
+	alertBox.appendChild(createAlert);
 
 	setTimeout(function(){ 	
-		if(alertBox.contains(createMssg)){ createMssg.classList.add('alertHidden') }
+		alertBox.contains(createAlert) && createAlert.classList.add('alertHidden')
 	}, 5300);
 
-
 	setTimeout(function(){ 	
-		if(alertBox.contains(createMssg)){ alertBox.removeChild(createMssg); }
+		alertBox.contains(createAlert) && alertBox.removeChild(createAlert)
 	}, 6000);
-
-
-	createMssg.firstChild.addEventListener('click',(e)=>{
-		alertBox.removeChild(e.target.parentNode)
-	})
 }
