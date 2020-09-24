@@ -3,7 +3,7 @@ function mssg(message,type=null){
 	
 	const createAlert = document.createElement("DIV");
 	
-	createAlert.setAttribute("class", (type === 'e' || type === 'error')? "alertWrong" : "alertFine" ); 
+	createAlert.setAttribute("class", (type === 'e' || type === 'error')? 'alertWrong' : 'alertFine' ); 
 		
 	createAlert.innerHTML = `<button class='alertBox_btn' onclick="this.parentNode.remove()">x</button> ${message}`;	
 
