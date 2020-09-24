@@ -3,9 +3,13 @@ function mssg(message,type=null){
 	
 	const createAlert = document.createElement("DIV");
 	
-	createAlert.setAttribute("class", (type === 'e' || type === 'error')? 'alertWrong' : 'alertFine' ); 
+	createAlert.setAttribute("class", 
+		(type === 'e' || type === 'error')
+		? 'alertbox__mssg alertbox__mssg--error' 
+		: 'alertbox__mssg alertbox__mssg--ok' 
+	);
 		
-	createAlert.innerHTML = `<button class='alertBox_btn' onclick="this.parentNode.remove()">x</button> ${message}`;	
+	createAlert.innerHTML = `<button class='alertbox__close' onclick="this.parentNode.remove()">x</button> ${message}`;	
 
 	alertBox.appendChild(createAlert);
 
