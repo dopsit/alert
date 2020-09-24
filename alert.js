@@ -14,7 +14,7 @@ function mssg(message,type=null){
 	alertBox.appendChild(createAlert);
 
 	setTimeout(function(){ 	
-		alertBox.contains(createAlert) && createAlert.classList.add('alertHidden')
+		alertBox.contains(createAlert) && createAlert.classList.add('alertbox__hidden')
 	}, 5300);
 
 	setTimeout(function(){ 	
