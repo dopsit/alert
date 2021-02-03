@@ -10,4 +10,4 @@
                mssg('Este es otro mensaje de Error', 'error');
           </script>
 
-   <a href="https://soporte00.github.io/alert/">Puedes ver el live aqui</a>
+   <a href="https://soporte00.github.io/alert/" target="_blank">Puedes ver el live aqui</a>
